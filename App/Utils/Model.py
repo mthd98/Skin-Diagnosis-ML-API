@@ -1,8 +1,3 @@
-"""Model class for loading and making predictions using a TensorFlow model with FastAPI.
-
-This class loads a pre-trained model from the specified directory and provides
-methods to make predictions on input data.
-"""
 
 import tensorflow as tf
 import numpy as np
