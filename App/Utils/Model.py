@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List, Dict, Union
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR / 'Model'
+MODEL_PATH = "/Skin-Diagnosis-ML-API/App/Model"
 
 
 class Model:
@@ -53,7 +53,8 @@ class Model:
             # Binary classification
             classes = ["Malignant", "Benign"]
             predictions = predictions.flatten()
-            result = [{classes[0]: 1 - prob, classes[1]: prob} for prob in predictions]
+            result = [{classes[0]: float(1 - prob), classes[1]: float(prob)} for prob in predictions]
+
         else:
             # Multi-class classification
             classes = [

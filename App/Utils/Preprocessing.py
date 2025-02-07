@@ -26,7 +26,7 @@ class PreprocessImages:
         Returns:
             tf.Tensor: Preprocessed image tensor.
         """
-        if not isinstance(image, tf.Tensor):
+        if not isinstance(image, bytes):
             raise ValueError("Input image must be a TensorFlow tensor.")
 
         image = tf.image.decode_jpeg(image, channels=3)
