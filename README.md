@@ -108,7 +108,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
----
-
-*Note: This README provides detailed instructions on building and running the Skin-Diagnosis-ML-API using Docker. For more information about API endpoints and functionalities, please refer to the project's documentation or source code.*
-
