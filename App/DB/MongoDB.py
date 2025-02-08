@@ -5,8 +5,6 @@ import pandas as pd
 # MongoDB Connection
 class MongoDB:
     """
-    A MongoDB class that mirrors typical SQL-like methods for
-    databases, 'tables' (collections), and data operations.
     """
     def __init__(self, username=None, password=None):
         if username and password:
