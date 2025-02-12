@@ -31,7 +31,7 @@ async def check_api_key(api_key: str = Depends(api_key_header)):
     api_key_info = json.loads(dumps(api_key_info))
 
     # Check if API key is expired
-    expired_date = datetime.datetime.strptime(api_key_info["expired_date"], "%Y-%m-%d %H:%M:%S")
+    expired_date = datetime.datetime.strptime(str(api_key_info["expired_date"]), "%Y-%m-%d %H:%M:%S")
     if datetime.datetime.now() >= expired_date:
         raise HTTPException(status_code=400, detail="API Key Expired")
 
